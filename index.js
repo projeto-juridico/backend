@@ -1,13 +1,23 @@
 const express = require('express');
-const cors = require('cors');
+const cors = require('cors'); 
 
 const app = express();
 const port = 3001;
 
-app.use(cors({
-  origin: 'http://localhost:3000' // Permite apenas essa origem
-}));
+const allowedOrigins = [
+    'https://master--amazing-sunburst-566e88.netlify.app',
+    'http://localhost:3000'
+];
 
+app.use(cors({
+    origin: function(origin, callback){
+        if(!origin || allowedOrigins.includes(origin)){
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    }
+}));
 
 app.get('/', (req, res) => {
     res.send('Hello from the backend!');
