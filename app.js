@@ -6,7 +6,7 @@ const helloRoute = require('./routes/helloRoute');
 const mongoose = require('mongoose');
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3001; // teste
 
 const mongoURI = process.env.MONGO_URI;
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
