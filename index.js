@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors'); 
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 const allowedOrigins = [
     'https://master--amazing-sunburst-566e88.netlify.app',
