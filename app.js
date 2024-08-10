@@ -12,7 +12,7 @@ app.use(cors);
 app.use('/hello', helloRoute);
 
 app.get('/', (req, res) => {
-    res.send('Hello from the backend!');
+    res.send('Your are in the root of the app.');
 });
 
 app.listen(port, () => {
