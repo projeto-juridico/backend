@@ -50,12 +50,12 @@ Este serviço verifica se um usuário existe no banco de dados com base no email
 ### Exemplo de Uso:
 
 #### Requisição:
-```json
+```
 POST /user/check-user
 Host: juridico-backend.adaptable.app
 Content-Type: application/json
-Authorization: Bearer seu-token-nao-logado
-
+```
+```json
 {
     "email": "exemplo@dominio.com"
 }
