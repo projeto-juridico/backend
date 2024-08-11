@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('./middlewares/corsMiddleware');
 const helloRoute = require('./routes/helloRoute');
+const userRoute = require('./routes/userRoute');
 const mongoose = require('mongoose');
 
 const app = express();
@@ -15,9 +16,11 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 // Middleware
 app.use(cors);
+app.use(express.json());
 
 // Rotas
 app.use('/hello', helloRoute);
+app.use('/user', userRoute);
 
 app.get('/', (req, res) => {
     res.json({ message: 'You are in the root of the app.' });
