@@ -7,7 +7,7 @@ Este serviço verifica se um usuário existe no banco de dados com base no email
 ## Método: `POST`
 
 ### Endpoint:
-`/user/check-user`
+`/user/check`
 
 ### Body da Requisição:
 ```json
@@ -51,7 +51,7 @@ Este serviço verifica se um usuário existe no banco de dados com base no email
 
 #### Requisição:
 ```
-POST /user/check-user
+POST /user/check
 Host: juridico-backend.adaptable.app
 Content-Type: application/json
 ```
