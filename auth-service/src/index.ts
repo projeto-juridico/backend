@@ -4,9 +4,9 @@ const app = express();
 const port = 8080;
 
 require("dotenv").config();
-app.use("/user", userRouter);
+app.use("/auth-service/user", userRouter);
 
-app.get("/", (req, res) => {
+app.get("/auth-service", (req, res) => {
   res.send("Hello World!");
 });
 
