@@ -5,13 +5,13 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use("/api", routes);
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("API Gateway is up and running!");
+  res.send("API Gateway is up and running!3");
 });
 
 app.listen(PORT, () => {
