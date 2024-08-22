@@ -13,6 +13,9 @@ RUN npm install
 # Copiando o restante do código da aplicação
 COPY . .
 
+# Copiar o arquivo .env para dentro do contêiner
+COPY .env .env
+
 # Expondo a porta em que a aplicação vai rodar
 EXPOSE 7505
 
