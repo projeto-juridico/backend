@@ -11,7 +11,7 @@ app.use(express.json());
 app.use("/api", routes);
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("API Gateway is up and running!3");
+  res.send("API Gateway is up and running!4");
 });
 
 app.listen(PORT, () => {
