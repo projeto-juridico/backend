@@ -1,14 +1,17 @@
 import express from "express";
-const userRouter = require("./routes/User");
+
+import router from "./routes/AuthRoutes";
+import connectDB from "./configs/db.config";
+
 const app = express();
 const port = 8080;
 
 require("dotenv").config();
-app.use("/auth-service/user", userRouter);
+connectDB();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.get("/auth-service", (req, res) => {
-  res.send("Hello World!");
-});
+app.use("/auth-service", router);
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
