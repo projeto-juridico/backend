@@ -1,17 +1,33 @@
 {
-  "name": "backend",
+  "name": "user-service",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "This a NodeJS project using Express. So to start you need to have yarn add as your global variable Run `yarn` to install all the packages",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.ts"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
+    "axios": "^1.7.5",
+    "bcrypt": "^5.1.1",
+    "crypto": "^1.0.1",
+    "dot-env": "^0.0.1",
     "dotenv": "^16.4.5",
-    "express": "^4.17.1",
+    "dotenv-safe": "^9.1.0",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.2"
   },
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^22.5.1"
+  }
 }
