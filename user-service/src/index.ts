@@ -10,5 +10,3 @@ app.use("/user-service", routes);
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
-
-//Now, we will create a  Dockerfile  to build the Docker image for our service.
